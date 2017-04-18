@@ -15,6 +15,10 @@ export default class Stack {
   }
 
   pop() {
+    if( this.isEmpty() ){
+      return null
+    }
+
     let result = this.top.data
     this.top = this.top.next
     this.size--

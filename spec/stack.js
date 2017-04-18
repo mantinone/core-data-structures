@@ -35,6 +35,12 @@ describe('Stack', () => {
         .to.alter( () => myStack.length(), { from: 2, to: 1 })
 
     })
+
+    it('Returns null for an empty stack', () => {
+      const myStack = new Stack()
+
+      expect( myStack.pop() ).to.be.null
+    })
   })
 
   context('peek()', () => {
