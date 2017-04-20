@@ -48,21 +48,6 @@ export default class LinkedList {
     return this.find( data ) !== -1
   }
 
-  // insertBefore( data, before ){
-  //   let newNode = new DoubleNode( data )
-  //   let foundNode = this.find( before )
-  //   if( foundNode === -1 ) {
-  //     return -1
-  //   }
-  //   if( foundNode === null ){
-  //     this.head = newNode
-  //     newNode.next = this.tail
-  //   } else {
-  //     newNode.next = foundNode.next
-  //     foundNode.next = newNode
-  //   }
-  // }
-
   insertAfter( after, data ){
     let newNode = new DoubleNode( data )
     let foundNode = this.find( after )
@@ -77,6 +62,7 @@ export default class LinkedList {
     newNode.next = foundNode.next
     newNode.prev = foundNode
     foundNode.next = newNode
+    this.size++
   }
 
   insertBefore( data, before ){
@@ -93,6 +79,7 @@ export default class LinkedList {
     newNode.prev = foundNode.next
     newNode.next = foundNode
     foundNode.prev = newNode
+    this.size++
   }
 
   getHeadNode() {

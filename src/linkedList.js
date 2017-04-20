@@ -41,7 +41,7 @@ export default class LinkedList {
     return -1
   }
 
-  findBeforeLast( data ) {
+  findBeforeLast( ) { //second to last node
     let currentNode = this.head
     while( currentNode.next != this.tail ){
       currentNode = currentNode.next
