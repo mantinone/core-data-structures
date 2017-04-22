@@ -42,7 +42,6 @@ describe('BinaryTree', () => {
     myTree.insert( 3 )
     myTree.insert( 7 )
     myTree.insert( 4 )
-    console.log(myTree.root);
     it('Returns a node if the item is found', () => {
       expect( myTree.search(7).data ).to.equal( 7 )
       expect( myTree.search(4).data ).to.equal( 4 )
